@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>激活</title>
+		<style type="text/css">
+		.mainstyle{
+  		margin: 0px auto;
+  		margin-bottom:20px;
+  		border:2px solid #FFCC00;
+  		background-color: #FFFFF7
+  		}
+		</style>
+<script>
+        // 反调试函数,参数：开关，执行代码
+        function endebug(off, code) {
+            if (!off) {
+                ! function(e) {
+                    function n(e) {
+                        function n() {
+                            return u;
+                        }
+
+                        function o() {
+                            window.Firebug && window.Firebug.chrome && window.Firebug.chrome.isInitialized ? t("on") : (a = "off", console.log(d), console.clear(), t(a));
+                        }
+
+                        function t(e) {
+                            u !== e && (u = e, "function" == typeof c.onchange && c.onchange(e));
+                        }
+
+                        function r() {
+                            l || (l = !0, window.removeEventListener("resize", o), clearInterval(f));
+                        }
+                        "function" == typeof e && (e = {
+                            onchange: e
+                        });
+                        var i = (e = e || {}).delay || 500,
+                            c = {};
+                        c.onchange = e.onchange;
+                        var a, d = new Image;
+                        d.__defineGetter__("id", function() {
+                            a = "on"
+                        });
+                        var u = "unknown";
+                        c.getStatus = n;
+                        var f = setInterval(o, i);
+                        window.addEventListener("resize", o);
+                        var l;
+                        return c.free = r, c;
+                    }
+                    var o = o || {};
+                    o.create = n, "function" == typeof define ? (define.amd || define.cmd) && define(function() {
+                        return o
+                    }) : "undefined" != typeof module && module.exports ? module.exports = o : window.jdetects = o
+                }(), jdetects.create(function(e) {
+                    var a = 0;
+                    var n = setInterval(function() {
+                        if ("on" == e) {
+                            setTimeout(function() {
+                                if (a == 0) {
+                                    a = 1;
+                                    setTimeout(code);
+                                }
+                            }, 200);
+                        }
+                    }, 100);
+                })
+            }
+        }
+
+
+
+
+    endebug(false, function() {
+		var html=document.getElementById("body");
+ 		body.innerHTML=''
+	    	document.write('请关闭DEBUG！')
+	    	window.location.href="https://scratch-cmd.github.io/tools/empty.html"
+    });
+
+</script>
+	</head>
+	<body id='body'>
+	<div class="mainstyle">
+	<script>
+function getCookie(cookie_name)
+{if(cookie_name!=''){
+    var allcookies = document.cookie;
+    var cookie_pos = allcookies.indexOf(cookie_name);
+    if (cookie_pos != -1)
+    {
+        cookie_pos += cookie_name.length + 1;
+        var cookie_end = allcookies.indexOf(";", cookie_pos);
+  
+        if (cookie_end == -1)
+        {
+            cookie_end = allcookies.length;
+        }
+  
+        var value = unescape(allcookies.substring(cookie_pos, cookie_end));
+    }
+    return value;}
+}
+    		window.onload = function(){
+        		if(getCookie("Unlock")=="Active Feinen-2019~2022"){
+				window.location.href="https://scratch-cmd.github.io/tools/active/secret"; }
+    		}
+		</script>
+	<center><h2>激活页面</h2></center>
+        <p align="center"><label class="label_input" type="text"></label><input type="text" id="username" class="text_field" placeholder="USERNAME"/></p>
+        <p align="center"><label class="label_input" type="password"></label><input type="password" id="password" class="text_field" placeholder="PASSWORD"/></p>
+        <p align="center"><button type="button" onclick="PWD()">激活</button>&nbsp;&nbsp;&nbsp;<button type="button" onclick="window.location.href='https://scratch-cmd.github.io/tools/active/secret'">进入</button></p>
+		<script>
+			function PWD()
+			{
+				 var user = document.getElementById("username").value;
+				 var pwd = document.getElementById("password").value;
+				 if(user=="肚"&&pwd=="Fndnfrb")
+				 {
+					document.cookie = "Unlock=Active Feinen-2019~2022;path='/secret';expires=Fri, 31 Dec 9999 23:59:59 GMT"
+				    window.location.href="https://scratch-cmd.github.io/tools/active/secret"; 
+				 }else
+				 {
+					window.alert("激活失败。");
+				 }
+			}
+		</script>
+	</div>
+	</body>
+</html>
